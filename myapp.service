@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve my Flask app
+After=network.target
+
+[Service]
+User=vagrant
+Group=vagrant
+WorkingDirectory=/home/vagrant/myapp
+ExecStart=/home/vagrant/venv/bin/gunicorn -w 2 -b 127.0.0.1:5000 app:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
