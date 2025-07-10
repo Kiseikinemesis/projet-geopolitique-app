@@ -1,0 +1,82 @@
+# projet-geopolitique-app
+
+PRESENTATION
+
+App de collecte de données pour veille géopolitique axe Japon
+
+Projet de fin d’année – Spécialisation DevOps   
+
+Objectif : Déployer une application Python de veille automatisée sur une infrastructure sécurisée Kubernetes, avec CI/CD, IaC, monitoring et PRA.  
+École : DataScientest 
+
+Thématique : Veille OSINT – DevOps | Géopolitique | Cybersécurité  
+
+🎯 Objectifs pédagogiques 
+
+🔧 Automatiser le déploiement d’une application sur Kubernetes via CI/CD
+
+🏗️ Décrire l’infrastructure avec Terraform et Ansible (IaC)
+
+🛰️ Collecter automatiquement des données OSINT (flux RSS géopolitiques)
+
+🔐 Intégrer la sécurité dans le cycle de vie du déploiement (DevSecOps) 
+
+📊 Assurer le monitoring applicatif et l’observabilité 
+
+💾 Implémenter un plan de sauvegarde/restauration (PRA) 
+
+📍 L’infrastructure est provisionnée automatiquement avec Terraform, configurée avec Ansible, puis exploitée dans un pipeline CI/CD GitHub Actions. 
+
+🛠️ Stack technique
+
+| Domaine              | Outils utilisés                     |
+| -------------------- | ----------------------------------- |
+| Infrastructure (IaC) | Terraform, Ansible                  |
+| Langage principal    | Python                              |
+| Conteneurisation     | Docker                              |
+| Orchestration        | Kubernetes (Minikube ou K3s)        |
+| CI/CD                | GitHub Actions                      |
+| Monitoring           | Prometheus, Grafana, Loki           |
+| Sécurité             | Trivy, Bandit, Safety, cert-manager |
+| PRA / Backup         | Scripts backup.py, restore.py       |
+
+📦 Fonctionnalités du projet
+
+✅ Application OSINT 
+- Collecte automatique d’infos géopolitiques via flux RSS 
+- Nettoyage de texte, extraction de mots-clés 
+- Journalisation des événements  
+
+✅ Déploiement automatisé 
+- Build, test, scan, et déploiement en continu via GitHub Actions 
+- Fichiers YAML Kubernetes (Deployment, Service, Ingress) 
+
+✅ Infrastructure as Code (IaC) 
+- Provisionnement avec Terraform : VM, stockage, cluster 
+- Configuration avec Ansible : Prometheus, Grafana, cert-manager
+
+✅ Monitoring 
+- Dashboard Grafana (métriques de traitement, erreurs) 
+- Alertes Prometheus 
+- Centralisation des logs via Loki 
+
+✅ PRA – Backup / Restauration 
+- Sauvegarde automatisée (JSON, CSV) 
+- Script restore.py avec relance du pod et rechargement 
+- Documentation PRA versionnée (PRA.md) 
+
+✅ Sécurité 
+- Scan d’image Docker (Trivy) 
+- Analyse statique du code (Bandit) 
+- Scan de dépendances (Safety) 
+- Chiffrement HTTPS (cert-manager avec Let’s Encrypt)  
+
+
+
+🙋‍♂️ Auteur  LAFARGE Laëtitia
+Alternant DevOps – DataScientest 
+📫 laet.lfrg@gmail.com
+💼 https://www.linkedin.com/in/laetitia-lafarge-4a3235191
+
+📑 Licence  Ce projet est sous licence MIT.
+
